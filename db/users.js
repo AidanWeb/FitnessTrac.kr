@@ -3,7 +3,7 @@ const bcrypt = require('bcrypt');
 const { SALT_COUNT } = process.env;
 
 async function hashStr(str) {
-    const hash = await bcrypt.hash(str, SALT_COUNT);
+    const hash = await bcrypt.hash(str, 10);
     return hash;
 }
 
